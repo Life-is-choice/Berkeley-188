@@ -1,0 +1,19 @@
+显然，人类距离真正的人工智能尚远，虽然没有统一的定义和理论，但仍有许多有价值的形式、方法值得学习。我们使用合适的理论来指导我们去实现特定领域的Agent
+
+定义环境状态state：环境模型所对应的状态，状态空间是原子的
+定义Agent：对状态采取行动，以期望达成目标状态
+定义行为act：一个act完成后，其结果是state集合中的一个元素
+定义规划：当环境是确定的，S-act->S',搜索空间路径以规划出完整的act
+定义策略：当环境是不确定的,只有P(S'|S,a),预测效用采取一个act
+
+Agent逻辑有以下伪代码
+whlie(1){
+if(act_queue.empty()){
+  handle = map2act(check_state())
+  if(handle){do(handle)}
+  else{
+    if(cost_time>tolerance){do(DEFAULT)}
+    else do(plan)/do(strategy)
+    }
+  }
+}
