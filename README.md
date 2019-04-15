@@ -1,2 +1,2 @@
-# -Berkeley-188
+# Berkeley-188
 part of Introduction to artificial intelligence
